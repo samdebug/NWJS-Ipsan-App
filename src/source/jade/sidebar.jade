@@ -1,0 +1,12 @@
+doctype html
+ul.page-sidebar-menu(ms-each-e="navs")
+  li(ms-class="active:$index===active_index",ms-class-1="{{e.menuid}}")
+    a(href="javascript:;",ms-data-idx="$index",ms-click="tab_click",ms-hover="hover")
+      span.remove
+        i.icon-remove-circle
+      i.icon-home
+      span.title
+      | {{e.title}}
+      span.selected(ms-class="active:$index===active_index")
+      span
+    ul.sub-menu(style="display:none;")
